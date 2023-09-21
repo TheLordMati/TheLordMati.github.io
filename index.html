@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Las Marias Sitio Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+
+            <!--Encabezado Inicio/Menu/Novedades/Contacto-->
+
+            <!--Logo en la pagina-->
+            <a href="file:C:\Users\USuario_\Desktop\LasMa\index.html"><img src="logolasma.png" class="logo"></a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="index.html" style="--i:1;" class='active'>Inicio</a></li>
+                <li><a href="novedades.html" style="--i:3;">Novedades</a></li>
+                <li><a href="Contacto.html" style="--i:4;">Contacto</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <!--texto principal-->
+                <h2>Esto no es solo yerba<br>Es <span>Las Marias</span></h2>
+                <p>Una de las yerbas mas degustadas a nivel global, por su excelencia en calidad y sabor, además de poseer un aroma cautivante.</p>
+                <!--Boton de Saber Más-->
+                <a href="https://www.lasmarias.com.ar/">Saber Más</a>
+            </div>
+            <div class="imgBox">
+
+                <img src="img1.png" class="yerbas">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#db1d4f')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png');changeCircleColor('#d8d559')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png');changeCircleColor('#017143')"></li>
+        </ul>
+
+
+        <ul class="icon">
+
+
+
+            <li>
+                <a href="https://www.facebook.com/EstablecimientoLasMarias"><img src="facebook.png"></a>
+            </li>
+            <li>
+                <a href="https://www.latiendadelasmarias.com.ar/"><img src="twitter.png"></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/experiencialasmarias/"><img src="instagram.png"></a>
+            </li>
+
+
+        </ul>
+
+
+    </section>
+    <!--            SCRIPTS             -->
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.yerbas').src = anything;
+        }
+
+        //Cambiar color de los circulos al tocarlos
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function() {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> Las Marias Sitio Web</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="file:///C:/Users/USuario_/Desktop/Pagina%20Las%20Marias/index.html#"><img src="logolasma.png"  class="logo"></a>
+            <ul>
+                <li><a href="file:///C:/Users/USuario_/Desktop/Pagina%20Las%20Marias/index.html#">Inicio</a></li>
+                <li><a href="#">Menú</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Esto no es solo yerba<br>Es <span>Las Marias</span></h2>
+                <p>Una de las yerbas mas degustadas a nivel global, por su excelencia en calidad y sabor, además de poseer 
+                    un aroma cautivante.</p>
+                <a href="https://www.lasmarias.com.ar/">Saber Más</a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" class="yerbas">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick ="imgSlider('img1.png');changeCircleColor('#db1d4f')"></li>
+            <li><img src="thumb2.png" onclick ="imgSlider('img2.png');changeCircleColor('#d8d559')"></li>
+            <li><img src="thumb3.png" onclick ="imgSlider('img3.png');changeCircleColor('#017143')"></li>
+        </ul>
+
+        ///////////////
+        <ul class="icon">
+
+            <li><img src= a href="https://www.latiendadelasmarias.com.ar/"></li>
+
+        </ul>
+        ////////////////
+
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/EstablecimientoLasMarias"><img src="facebook.png"></a></li>
+            <li><a href="https://www.latiendadelasmarias.com.ar/"><img src="twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/experiencialasmarias/"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.yerbas').src = anything;
+        }
+
+        //Cambiar color de los circulos al tocarlos
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255, 255, 255);
+}
+
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo
+{
+    position: relative;
+    max-width: 200px;
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+}
+
+header ul li
+{
+    list-style: none;
+}
+
+header ul li a
+{
+    
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox
+{
+    position: relative;
+    max-width: 800px;
+}
+
+.content .textBox h2
+{
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox h2 span
+{
+    color: #ca002c;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .textBox p
+{
+    color: #333;
+}
+
+.content .textBox a
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #ca002c;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .imgBox
+{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .imgBox img
+{
+    max-width: 480px;
+}
+
+.thumb
+{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.thumb li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.thumb li:hover
+{
+    transform: translateY(-15%);
+}
+
+.thumb li img
+{
+    max-width: 200px;
+}
+
+.sci
+{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sci li
+{
+    list-style: none;
+}
+
+.sci li a
+{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+
+.circle
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #db1d4f;
+    clip-path: circle(600px at right 800px);
+}
+
+.icon
+{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.icon li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icon li:hover
+{
+    transform: translateY(-15%);
+}
+
+.icon li img
+{
+    max-width: 200px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Las Marias Sitio Web</title>
+    <link rel="stylesheet" href="stylesin.css">
+</head>
+<link rel="stylesheet" href="stile.css">
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="imgBx">
+                <img src="call.png">
+            </div>
+            <div class="content">
+                <div class="icono">
+                    <img src="call.png">
+                </div>
+                <h3>Número de Telefono</h3>
+                <h4>+54(03756)493000</h4>
+                <h5>+54 (11) 4303-1162/9</h5>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="open-email.png">
+            </div>
+            <div class="content">
+                <div class="icono">
+                    <img src="open-email.png">
+                </div>
+                <h3>Email</h3>
+                <h4>atclientes@lasmarias.com.ar</h4>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="map.png">
+            </div>
+            <div class="content">
+                <div class="icono">
+                    <img src="map.png">
+                </div>
+                <h3>Dirección</h3>
+                <h4>Gobernador Virasoro Corrientes Ruta Nacional 14 Km 739</h4>
+                <h5>-W3342BQA-</h5>
+            </div>
+        </div>
+    </div>
+    <header>
+
+        <!--Encabezado Inicio/Menu/Novedades/Contacto-->
+
+        <!--Logo en la pagina-->
+        <a href="file:C:\Users\USuario_\Desktop\LasMa\index.html"><img src="logolasma.png" class="logo"></a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="index.html" style="--i:1;">Inicio</a></li>
+            <li><a href="novedades.html" style="--i:3;">Novedades</a></li>
+            <li><a href="Contacto.html" style="--i:4;" class='active'>Contacto</a></li>
+        </ul>
+    </header>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function() {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
